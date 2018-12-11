@@ -42,6 +42,9 @@ public class Main {
         LongNum res = algo.discreteLogBSGS(a, b, z);
         if(res!=null)
         System.out.println(res.getString());
+        a.fromString("9");
+        b.fromString("13");
+        System.out.println(algo.Chipolla(a,b).getString());
         /*for(Integer i = 2; i<100;i++){
             LongNum cur = new LongNum();
             cur.fromString(i.toString());

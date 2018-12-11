@@ -195,14 +195,14 @@ public class Algo {
 
     public LongNum Chipolla(LongNum a, LongNum p) {
 
-        LongNum w = new LongNum();
+        LongNum w;
         LongNum b;
         while (true) {
-            b = LongNum.random(9);
+            b = LongNum.random(a.size()).addition(one).module(a);
             w = b.multiply(b).subst(a).module(p);
             if (w.equals(zero))
                 return b;
-            if (calcLejandreSymbol(w, p) == 1)
+            if (calcLejandreSymbol(w, p) != 1)
                 break;
         }
         return SuperMultiply(b, w, p.addition(one).divide(two), p);
